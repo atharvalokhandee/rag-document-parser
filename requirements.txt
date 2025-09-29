@@ -1,9 +1,21 @@
+# Frontend
 streamlit==1.32.0
+
+# Text extraction / RAG
 unstructured[all-docs]==0.12.5
 faiss-cpu==1.8.0
 sentence-transformers==2.5.1
+
+# LLM / LangChain
 langchain==0.1.13
 langchain-community==0.0.29
+
+# Groq API
 groq==0.4.2
+
+# Environment and utilities
 python-dotenv==1.0.1
 opencv-python-headless==4.10.0.84
+
+# Hugging Face Hub
+huggingface_hub>=0.17.0
