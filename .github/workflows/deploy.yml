@@ -28,8 +28,7 @@ jobs:
           pip install -r requirements.txt
 
       # Step 4: Deploy to Hugging Face
-      - name: Deploy to Hugging Face
+      - name: Deploy to Hugging Face Space
         run: |
-          pip install huggingface_hub
-          huggingface-cli login --token ${{ secrets.HF_TOKEN }}
-          huggingface-cli upload ./ --repo ${{ secrets.HF_REPO }}
+          hf auth login --token ${{ secrets.HF_TOKEN }}
+          huggingface-cli upload ./app --repo-type space --repo-id ${{ secrets.HF_REPO }}
